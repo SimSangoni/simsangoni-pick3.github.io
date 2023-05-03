@@ -1,9 +1,14 @@
 window.onload = function () {
+  var incorrectAnswers = [];
+  var showIncorrectButton = document.getElementById('show-incorrect');
+  showIncorrectButton.addEventListener('click', showIncorrectAnswers);
+
   
     var questionArea = document.getElementsByClassName('questions')[0],
         answerArea   = document.getElementsByClassName('answers')[0],
         checker      = document.getElementsByClassName('checker')[0],
         current      = 0,
+        
     
        // An object that holds all the questions + possible answers.
        // In the array --> last digit gives the right answer position
@@ -377,12 +382,36 @@ window.onload = function () {
           '45.京剧的角色分为生、旦、净、末、丑五个行当，其中青衣属于 。':
           [' 生',' 旦',' 净 ', 1]
         };
+
+          // An array that holds all the keys of the questions object
+      questionKeys = Object.keys(allQuestions),
+      
+      // Shuffle the keys array using Fisher-Yates shuffle algorithm
+      shuffle = function (arr) {
+        for (var i = arr.length - 1; i > 0; i--) {
+          var j = Math.floor(Math.random() * (i + 1));
+          var temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = temp;
+        }
+        return arr;
+      },
+      shuffledKeys = shuffle(questionKeys),
+      
+      // A new object that holds the shuffled questions
+      shuffledQuestions = {};
+      
+  // Fill the shuffledQuestions object with the shuffled keys and their values
+  shuffledKeys.forEach(function (key) {
+    shuffledQuestions[key] = allQuestions[key];
+  });
         
     function loadQuestion(curr) {
     // This function loads all the question into the questionArea
     // It grabs the current question based on the 'current'-variable
     
-      var question = Object.keys(allQuestions)[curr];
+      //var question = Object.keys(allQuestions)[curr];
+      var question = shuffledKeys[curr];
       
       questionArea.innerHTML = '';
       questionArea.innerHTML = question;    
@@ -393,7 +422,8 @@ window.onload = function () {
     // It grabs the needed answer-array with the help of the current-variable
     // Every answer is added with an 'onclick'-function
     
-      var answers = allQuestions[Object.keys(allQuestions)[curr]];
+      //var answers = allQuestions[Object.keys(allQuestions)[curr]];
+      var answers = shuffledQuestions[shuffledKeys[curr]];
       
       answerArea.innerHTML = '';
       
@@ -422,7 +452,8 @@ window.onload = function () {
         if (givenAnswer === correctAnswer) {
           addChecker(true);             
         } else {
-          addChecker(false);                        
+          addChecker(false); 
+          incorrectAnswers.push(current);                       
         }
         
         if (current < Object.keys(allQuestions).length -1) {
@@ -456,6 +487,28 @@ window.onload = function () {
         checker.appendChild(createDiv);
       }
     }
+
+    function showIncorrectAnswers() {
+      var resultArea = document.getElementsByClassName('result')[0];
+      
+      // Clear the result area before displaying the new results
+      resultArea.innerHTML = '';
+      
+      for (var i = 0; i < incorrectAnswers.length; i++) {
+        var index = incorrectAnswers[i];
+        var question = Object.keys(allQuestions)[index];
+        var answers = allQuestions[question];
+        var correctAnswer = answers[answers.length - 1];
+        
+        // Create a new element to display the question and its correct answer
+        var questionElement = document.createElement('div');
+        questionElement.innerHTML = question + '<br>Correct answer: ' + answers[correctAnswer - 1];
+        questionElement.className = 'incorrect';
+        
+        resultArea.appendChild(questionElement);
+      }
+    }
+    
     
     
     // Start the quiz right away
