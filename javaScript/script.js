@@ -9,7 +9,6 @@ window.onload = function () {
         checker      = document.getElementsByClassName('checker')[0],
         current      = 0,
         
-    
        // An object that holds all the questions + possible answers.
        // In the array --> last digit gives the right answer position
         allQuestions = {       
