@@ -1,16 +1,15 @@
 window.onload = function () {
 
-  var incorrectAnswers = [];
-  var showIncorrectButton = document.getElementById('show-incorrect');
-  showIncorrectButton.addEventListener('click', showIncorrectAnswers);
-
+  
   
     var questionArea = document.getElementsByClassName('questions')[0],
         answerArea   = document.getElementsByClassName('answers')[0],
         checker      = document.getElementsByClassName('checker')[0],
         current      = 0,
-
-       中文 = {       
+        incorrectAnswers = [],
+        showIncorrectButton = document.getElementById('show-incorrect');
+        showIncorrectButton.addEventListener('click', showIncorrectAnswers);
+        中文 = {       
         '1. “我汉语说得不太好，你得帮帮我。”这句话中两个“得”的发音分别是。' : 
         [ 'de de', 'děi de' ,'de děi', 2],
 
@@ -140,9 +139,8 @@ window.onload = function () {
         '43. “张总是我们公司的一把手。”这句话中的“一把手”意思是：':
         [' 工作能手 ', '清洁工人', '文字秘书 ', ' 最高领导 ', 3]
 
-       },
-
-       国青 = {
+        },
+        国青 = {
         '1. 中国迄今为止持续时间最长、参与人数最多、国家支持最大、社会影响最广的志愿服务项目是 。':
         ['红丝带计划', '西部计划', '希望工程', '三支一扶', 1],
         
@@ -249,8 +247,7 @@ window.onload = function () {
         ['010', '020', '001', '002', 0]
 
        },
-    
-      文化 = {  
+        文化 = {  
           
           '1. 中国是世界文明古国之一，指南针、 造纸术、印刷术和 ______ 这“ 四大发 明”展现了中国古代灿烂的科技文化。':
           [ '日晷 ',' 地动仪', '火药 ',' 针灸', 2],
@@ -386,14 +383,11 @@ window.onload = function () {
           
           '45.京剧的角色分为生、旦、净、末、丑五个行当，其中青衣属于 。':
           [' 生',' 旦',' 净 ', 1]
-      };
-
-
-      allQuestions = 国青; // initialize allQuestions to 中文
-
-
-        questionKeys = Object.keys(allQuestions),
-        shuffle = function (arr) {
+       };
+      
+    let allQuestions = 国青; // initialize allQuestions to 中文  
+    var questionKeys = Object.keys(allQuestions),
+    shuffle = function (arr) {
           for (var i = arr.length - 1; i > 0; i--) {
             var j = Math.floor(Math.random() * (i + 1));
             var temp = arr[i];
@@ -401,12 +395,12 @@ window.onload = function () {
             arr[j] = temp;
           }
           return arr;
-        },
-        shuffledKeys = shuffle(questionKeys),
-        shuffledQuestions = {};
-        shuffledKeys.forEach(function (key) {
+      },
+      shuffledKeys = shuffle(questionKeys),
+      shuffledQuestions = {};
+      shuffledKeys.forEach(function (key) {
       shuffledQuestions[key] = allQuestions[key];
-        });
+      });
         
     function loadQuestion(curr) {
     // This function loads all the question into the questionArea
