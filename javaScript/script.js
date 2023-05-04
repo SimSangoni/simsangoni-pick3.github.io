@@ -1,7 +1,7 @@
 window.onload = function () {
 
-  
-  
+  const buttons = document.querySelectorAll(".myButton");
+
     var questionArea = document.getElementsByClassName('questions')[0],
         answerArea   = document.getElementsByClassName('answers')[0],
         checker      = document.getElementsByClassName('checker')[0],
@@ -385,7 +385,24 @@ window.onload = function () {
           [' 生',' 旦',' 净 ', 1]
        };
       
-    let allQuestions = 国青; // initialize allQuestions to 中文  
+    //var allQuestions; // initialize allQuestions to 中文  
+
+    var allQuestions = 国青;
+
+    buttons.forEach(function(button) {
+      button.addEventListener("click", function() {
+        const buttonId = button.getAttribute("data-button");
+        
+        if (buttonId == "文化") {
+          allQuestions = 文化; // update allQuestions to 文化
+        } else if (buttonId == "国情") {
+          allQuestions = 国青; // update allQuestions to 国青
+        } else if (buttonId == "中文") {
+          allQuestions = 中文; // update allQuestions to 中文
+        }
+        return allQuestions;
+      });
+    });
     var questionKeys = Object.keys(allQuestions),
     shuffle = function (arr) {
           for (var i = arr.length - 1; i > 0; i--) {
@@ -403,10 +420,6 @@ window.onload = function () {
       });
         
     function loadQuestion(curr) {
-    // This function loads all the question into the questionArea
-    // It grabs the current question based on the 'current'-variable
-    
-      //var question = Object.keys(allQuestions)[curr];
       var question = shuffledKeys[curr];
       
       questionArea.innerHTML = '';
@@ -414,11 +427,6 @@ window.onload = function () {
     }
     
     function loadAnswers(curr) {
-    // This function loads all the possible answers of the given question
-    // It grabs the needed answer-array with the help of the current-variable
-    // Every answer is added with an 'onclick'-function
-    
-      //var answers = allQuestions[Object.keys(allQuestions)[curr]];
       var answers = shuffledQuestions[shuffledKeys[curr]];
       
       answerArea.innerHTML = '';
@@ -492,8 +500,8 @@ window.onload = function () {
       
       for (var i = 0; i < incorrectAnswers.length; i++) {
         var index = incorrectAnswers[i];
-        var question = Object.keys(allQuestions)[index];
-        var answers = allQuestions[question];
+        var question = shuffledKeys[index];
+        var answers = shuffledQuestions[question];
         var correctAnswer = answers[answers.length - 1];
         
         // Create a new element to display the question and its correct answer
