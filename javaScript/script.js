@@ -1,19 +1,4 @@
 window.onload = function () {
-  const buttons = document.querySelectorAll(".myButton");
-
-buttons.forEach(function(button) {
-  button.addEventListener("click", function() {
-    const buttonId = button.getAttribute("data-button");
-    
-    if (buttonId === "文化") {
-      return allQuestions = 文化;
-    } else if (buttonId === "国情") {
-      return allQuestions = 国情;
-    } else if (buttonId === "中文") {
-      return allQuestions = 中文;
-    }
-  });
-});
 
   var incorrectAnswers = [];
   var showIncorrectButton = document.getElementById('show-incorrect');
@@ -24,9 +9,7 @@ buttons.forEach(function(button) {
         answerArea   = document.getElementsByClassName('answers')[0],
         checker      = document.getElementsByClassName('checker')[0],
         current      = 0,
-        
-       // An object that holds all the questions + possible answers.
-       // In the array --> last digit gives the right answer position
+
        中文 = {       
         '1. “我汉语说得不太好，你得帮帮我。”这句话中两个“得”的发音分别是。' : 
         [ 'de de', 'děi de' ,'de děi', 2],
@@ -157,7 +140,7 @@ buttons.forEach(function(button) {
         '43. “张总是我们公司的一把手。”这句话中的“一把手”意思是：':
         [' 工作能手 ', '清洁工人', '文字秘书 ', ' 最高领导 ', 3]
 
-       };
+       },
 
        国青 = {
         '1. 中国迄今为止持续时间最长、参与人数最多、国家支持最大、社会影响最广的志愿服务项目是 。':
@@ -265,9 +248,9 @@ buttons.forEach(function(button) {
         '34. 中 国 北 京 市 的 电 话 区 号 是 ________。':
         ['010', '020', '001', '002', 0]
 
-       }
+       },
     
-        文化 = {  
+      文化 = {  
           
           '1. 中国是世界文明古国之一，指南针、 造纸术、印刷术和 ______ 这“ 四大发 明”展现了中国古代灿烂的科技文化。':
           [ '日晷 ',' 地动仪', '火药 ',' 针灸', 2],
@@ -403,30 +386,27 @@ buttons.forEach(function(button) {
           
           '45.京剧的角色分为生、旦、净、末、丑五个行当，其中青衣属于 。':
           [' 生',' 旦',' 净 ', 1]
-        };
+      };
 
-          // An array that holds all the keys of the questions object
-      questionKeys = Object.keys(allQuestions),
-      
-      // Shuffle the keys array using Fisher-Yates shuffle algorithm
-      shuffle = function (arr) {
-        for (var i = arr.length - 1; i > 0; i--) {
-          var j = Math.floor(Math.random() * (i + 1));
-          var temp = arr[i];
-          arr[i] = arr[j];
-          arr[j] = temp;
-        }
-        return arr;
-      },
-      shuffledKeys = shuffle(questionKeys),
-      
-      // A new object that holds the shuffled questions
-      shuffledQuestions = {};
-      
-  // Fill the shuffledQuestions object with the shuffled keys and their values
-  shuffledKeys.forEach(function (key) {
-    shuffledQuestions[key] = allQuestions[key];
-  });
+
+      allQuestions = 国青; // initialize allQuestions to 中文
+
+
+        questionKeys = Object.keys(allQuestions),
+        shuffle = function (arr) {
+          for (var i = arr.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+          }
+          return arr;
+        },
+        shuffledKeys = shuffle(questionKeys),
+        shuffledQuestions = {};
+        shuffledKeys.forEach(function (key) {
+      shuffledQuestions[key] = allQuestions[key];
+        });
         
     function loadQuestion(curr) {
     // This function loads all the question into the questionArea
@@ -530,11 +510,7 @@ buttons.forEach(function(button) {
         resultArea.appendChild(questionElement);
       }
     }
-    
-    
-    
-    // Start the quiz right away
-    loadQuestion(current);
-    loadAnswers(current);
-    
+
+  loadQuestion(current);
+  loadAnswers(current);  
   };
