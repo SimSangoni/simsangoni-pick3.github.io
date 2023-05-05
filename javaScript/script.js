@@ -10,7 +10,7 @@ window.onload = function () {
         showIncorrectButton = document.getElementById('show-incorrect');
         showIncorrectButton.addEventListener('click', showIncorrectAnswers);
 
-        中文和国青 = {       
+        两问题 = {       
         '1. “我汉语说得不太好，你得帮帮我。”这句话中两个“得”的发音分别是。' : 
         [ 'de de', 'děi de' ,'de děi', 2],
 
@@ -243,7 +243,7 @@ window.onload = function () {
         ['北暖南寒',  '南暖北寒', '东暖西寒', '西暖冬寒', 1],
         
         '34. 中 国 北 京 市 的 电 话 区 号 是 ________。':
-        ['010', '020', '001', '002', 0]
+        ['010', '020', '001', '002', 0]，
        },
 
         文化 = {  
@@ -386,7 +386,7 @@ window.onload = function () {
       
     //var allQuestions; // initialize allQuestions to 中文  
 
-    var allQuestions =  中文和国青 ;
+    var allQuestions =  两问题;
 
     buttons.forEach(function(button) {
       button.addEventListener("click", function() {
