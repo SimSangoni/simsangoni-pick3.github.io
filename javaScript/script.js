@@ -387,7 +387,7 @@ window.onload = function () {
       
     //var allQuestions; // initialize allQuestions to 中文  
 
-    var allQuestions = 国青;
+    var allQuestions = 国青, 中文 ;
 
     buttons.forEach(function(button) {
       button.addEventListener("click", function() {
