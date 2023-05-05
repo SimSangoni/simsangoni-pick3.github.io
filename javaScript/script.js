@@ -9,6 +9,7 @@ window.onload = function () {
         incorrectAnswers = [],
         showIncorrectButton = document.getElementById('show-incorrect');
         showIncorrectButton.addEventListener('click', showIncorrectAnswers);
+        
         中文和国青 = {       
         '1. “我汉语说得不太好，你得帮帮我。”这句话中两个“得”的发音分别是。' : 
         [ 'de de', 'děi de' ,'de děi', 2],
