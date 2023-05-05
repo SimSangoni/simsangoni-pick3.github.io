@@ -9,7 +9,7 @@ window.onload = function () {
         incorrectAnswers = [],
         showIncorrectButton = document.getElementById('show-incorrect');
         showIncorrectButton.addEventListener('click', showIncorrectAnswers);
-        中文 = {       
+        中文和国青 = {       
         '1. “我汉语说得不太好，你得帮帮我。”这句话中两个“得”的发音分别是。' : 
         [ 'de de', 'děi de' ,'de děi', 2],
 
@@ -137,10 +137,8 @@ window.onload = function () {
         [' 把','给 ',' 对 ','为了 ', 3],
 
         '43. “张总是我们公司的一把手。”这句话中的“一把手”意思是：':
-        [' 工作能手 ', '清洁工人', '文字秘书 ', ' 最高领导 ', 3]
+        [' 工作能手 ', '清洁工人', '文字秘书 ', ' 最高领导 ', 3]，
 
-        },
-        国青 = {
         '1. 中国迄今为止持续时间最长、参与人数最多、国家支持最大、社会影响最广的志愿服务项目是 。':
         ['红丝带计划', '西部计划', '希望工程', '三支一扶', 1],
         
@@ -387,7 +385,7 @@ window.onload = function () {
       
     //var allQuestions; // initialize allQuestions to 中文  
 
-    var allQuestions = 国青, 中文 ;
+    var allQuestions =  中文和国青 ;
 
     buttons.forEach(function(button) {
       button.addEventListener("click", function() {
