@@ -77,13 +77,13 @@ const quizData = {
         
       {
       question: '14. 春天是一个充满欢乐与希望的季节。朱自清写过《春》,里面有一句:“树叶却绿___发亮,小草也青得逼你_____眼。”', 
-      image: 'images/1.15_question.png',
       options: ['的 地', '得 地', '得 的'], 
       correctAnswer: 2
       },
       
       {
       question: '15. 公共场所有很多提示牌,提醒大家应该注意的事情。下面这个牌子想告诉大家_____。', 
+      image: 'images/1.15_question.png',
       options: ['慢慢地滑动', '地面很干净', '走路要小心'], 
       correctAnswer: 2
       },
