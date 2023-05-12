@@ -77,6 +77,7 @@ const quizData = {
         
       {
       question: '14. 春天是一个充满欢乐与希望的季节。朱自清写过《春》,里面有一句:“树叶却绿___发亮,小草也青得逼你_____眼。”', 
+      image: 'images/1.15_question.png',
       options: ['的 地', '得 地', '得 的'], 
       correctAnswer: 2
       },
@@ -186,6 +187,7 @@ const quizData = {
       
       {
       question: '33. 请猜一猜下面这个图片表示的是哪个成语的意思？', 
+      images: 'images/1.33_question.png',
       options: ['丢三落四', '挑三拣四', '朝三暮四'], 
       correctAnswer: 2
       },
@@ -326,6 +328,7 @@ const quizData = {
       },
       {
       question: '14. 现行第五套人民币五十元的背面图案是西藏的。',
+      image:'images/2.14_question.png',
       options: ['桂林山水', '人民大会堂', '布达拉宫'],
       correctAnswer: 2
       },
@@ -498,6 +501,7 @@ const quizData = {
       },
       {
       question: '14. 1974 年，在中国陕西出土的显示了秦代工匠高超的雕塑艺术水平。',
+      image:'images/3.14_question.png',
       options: ['唐三彩', '陶车', '兵马俑', '编钟'],
       correctAnswer: 2
       },
@@ -518,6 +522,7 @@ const quizData = {
       },
       {
       question: '18. 中国的地方戏丰富多彩，而且大多数地方戏都有自己的代表剧目。人们熟悉的《梁山伯与祝英台》是________代表剧目。',
+      image: 'images/3.18_question.png',
       options: ['评剧', '越剧', '粤剧', '豫剧'],
       correctAnswer: 1
       },
@@ -528,6 +533,7 @@ const quizData = {
       },
       {
       question: '20. 道教是中国土生土长的宗教，道教的建筑称“宫”或“”。',
+      image: 'images/3.20_question.png',
       options: ['寺', '观', '庙', '庵'],
       correctAnswer: 1
       },
@@ -539,6 +545,7 @@ const quizData = {
       {
       question: '22. 位于河南洛阳的______是中国石刻艺术的巅峰，也是多元文化融合的见证。',
       options: ['云冈石窟', '莫高窟', '龙门石窟', '麦积山石窟'],
+      image:'images/3.22_question.png',
       correctAnswer: 2
       },
       {
@@ -548,21 +555,25 @@ const quizData = {
       },
       {
       question: '24. 唢呐是一种民间吹管乐器，公元3世纪由______传入中国。',
+      image: 'images/3.24_question.png',
       options: ['朝鲜', '印度', '波斯', '日本'],
       correctAnswer: 2
       },
       {
       question: '25. _______是当今世界上现存最早、保存最完整的古代敞肩石拱桥，位于河北省石家庄市赵县。',
+      image: 'images/3.25_question.png',
       options: ['卢沟桥', '宝带桥', '洛阳桥', '赵州桥'],
       correctAnswer: 3
       },
       {
       question: '26. 北京的_______是目前世界上最大的木结构建筑群，它金碧辉煌、雄伟壮丽，被联合国教科文组织列为“世界文化遗产”。',
+      image: 'images/3.26_question.png',
       options: ['颐和园', '圆明园', '故宫', '雍和宫'],
       correctAnswer: 2
       },
      {
       question: '27. 狮子林、沧浪亭、拙政园和_______统称“苏州四大名园”，它们吸收了中国江南园林艺术的精华，是中国优秀的文化遗产。',
+      image: 'images/3.27_question.png',
       options: ['蠡园', '梅园', '留园', '网师园'],
       correctAnswer: 2
       },
@@ -583,11 +594,13 @@ const quizData = {
       },
       {
       question: '31. “那达慕大会”是______族人民一年一度的传统体育竞技活动，多在草绿花红、马壮羊肥的七、八月举行。',
+      image: 'images/3.31_question.png',
       options: ['维吾尔', '藏', '苗', '蒙古'],
       correctAnswer: 3
       },
       {
       question: '32. 北宋画家______的《清明上河图》生动地描绘了北宋都城汴梁（今开封）商业活动的繁荣景象，是中国古代绘画的杰作。',
+      image: 'images/3.32_question.png',
       options: ['张择端', '顾恺之', '曹仲达', '张僧繇'],
       correctAnswer: 0
       },
@@ -613,6 +626,7 @@ const quizData = {
       },
       {
       question: '37. 中国苗、瑶、侗等民族特别喜爱的一种古老乐器叫。',
+      image: 'images/3.37_question.png',
       options: ['笛子', '芦笙', '巴乌', '葫芦丝'],
       correctAnswer: 1
       },
@@ -623,6 +637,7 @@ const quizData = {
       },
       {
       question: '39. 旗袍是中国女性的传统正式服装，优美大方。下列哪一项是中国男士的传统正式服装？',
+      image: 'images/3.39_question.png',
       options: ['西装', '汉服', '中山装'],
       correctAnswer: 2
       },
@@ -653,6 +668,7 @@ const quizData = {
       },
       {
       question: '45. 京剧的角色分为生、旦、净、末、丑五个行当，其中青衣属于______。',
+      image: 'images/3.45_question.png',
       options: ['生', '旦', '净'],
       correctAnswer: 1
       },
@@ -691,7 +707,18 @@ function shuffleArray(array) {
 // Function to load the current question and its options
 function loadQuestion() {
   const currentQuizData = quizData[currentSection][currentQuestion];
-  questionsElement.textContent = currentQuizData.question;
+  questionsElement.innerHTML = "";
+
+  // Check if the question has an image
+  if (currentQuizData.image) {
+    const image = document.createElement("img");
+    image.src = currentQuizData.image;
+    questionsElement.appendChild(image);
+  }
+
+  const questionText = document.createElement("p");
+  questionText.textContent = currentQuizData.question;
+  questionsElement.appendChild(questionText);
 
   answersElement.innerHTML = "";
   currentQuizData.options.forEach((option, index) => {
