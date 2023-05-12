@@ -653,6 +653,7 @@ const quizData = {
       },
       {
       question: '42. 北京故宫每个宫殿的门口都有两个水缸，请问这些水缸的用途是什么？',
+      image: 'images/3.42_question.png',
       options: ['养鱼', '防火', '饮用'],
       correctAnswer: 1
       },
@@ -689,10 +690,12 @@ const quizData = {
     },
     {
       question: "3. 《 __________ 》是中国第一本按汉语拼音音序排列的小型字典，是迄今最有影响、最权威的一部小型汉语字典。",
+      image: 'images/4.3_question.png',
       answer: ["新华字典"]
     },
     {
       question: "4. “世界杂交水稻之父” __________院士利用中国野生稻资源培育出了世界闻名的杂交水稻。",
+      image: 'images/4.4_question.png',
       answer: ["袁隆平"]
     },
     {
@@ -701,10 +704,12 @@ const quizData = {
     },
     {
       question: "6. 中国现任国家主席是 __________。",
+      image: 'images/4.6_question.png',
       answer: ["习近平"]
     },
     {
       question: "7. __________是世界上最珍贵的动物之一，数量十分稀少，属于国家一级保护动物，体色为黑白相间，被誉为 “中国国宝”。",
+      image: 'images/4.7_question.png',
       answer: ["熊猫"]
     },
     {
@@ -725,6 +730,7 @@ const quizData = {
     },
     {
       question: "13. 2018 年 3 月 23 日，中国科学院古脊椎动物与古人类研究所教授、中国科学院院士张弥曼在巴黎获颁“世界杰出女科学家”奖，她是第 __________ 位获此殊荣的中国女科学家。",
+      image: 'images/4.13_question.png',
       answer: ["五"]
     },
     {
@@ -733,6 +739,7 @@ const quizData = {
     },
     {
       question: "15. 中华人民共和国国旗是 __________，旗面为红色，旗面左上方缀有五颗黄色五角星。",
+      image: 'images/4.15_question.png',
       answer: ["五星红旗"]
     },
     {
@@ -745,6 +752,7 @@ const quizData = {
     },
     {
       question: "18. __________连接肯尼亚首都内罗毕和东非第一大港蒙巴萨，是一条采用中国标准、中国技术、中国装备建造的现代化铁路。该铁路是肯尼亚半个世纪以来最大的基建工程，已于 2017年 6 月开始试运营。",
+      image: 'images/4.18_question.png',
       answer: ["蒙内铁路"]
     },
     {
