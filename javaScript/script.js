@@ -653,7 +653,7 @@ const quizData = {
       },
       {
       question: '45. 京剧的角色分为生、旦、净、末、丑五个行当，其中青衣属于______。',
-      options: ['生', '旦', '净',
+      options: ['生', '旦', '净'],
       correctAnswer: 1
       },
       {
