@@ -1,92 +1,59 @@
-body, html {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .wrapper {
-    width: 500px;
-    margin: 0 auto;
-    height: 100%;
-    padding-top: 0px;
-  }
-  
-  #quiz {
-    background-color: #34495E;
-    padding-bottom: 60px;
-    width: 100%;
-    border-radius: 2%;
-    color: #fff;
-    text-align: center;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-  }
-  
-  #quiz > h1 {
-    text-align: center;
-    padding-top: 25px;
-    font-size: 20px;
-  }
-  
-  .questions {
-    font-size: 28px;
-    font-weight: 700;
-    border-top: 1px solid #FFFFFF;
-    border-bottom: 1px solid #FFFFFF;
-    padding: 20px;
-  }
-  
-  .answers div {
-    padding: 10px 0 0 0;
-    font-size: 16px;
-  }
-  
-  .answers div:hover {
-    cursor: pointer;
-    color: #FBCB43;
-  }
-  
-  .answers {
-    padding: 0px 0 10px 0px;
-  }
-  
-  .answers div {
-    width: 50%;
-    margin: 0 auto;
-    padding-bottom: 15px;
-    border-top: 1px solid grey;
-  }
-  
-  .answers div:first-child {
-    border: none;
-  }
-  
-  .checker {
-    display: inline-block;
-    width: 200px;
-    margin: 0 auto;
-  }
-  
-  .correct, .false {
-    background-color: #109D59;
-    width: 60px;
-    height: 30px;
-    line-height: 30px;
-    padding-left: 4px;
-    float: left;
-    margin-left: 2px;
-    margin-top: 2px;
-  }
-  
-  .false {
-    background-color: #DC4437;
-  }
+/* Add your CSS styles here */
 
-  #show-incorrect {
-    font-size: 20px;
-    font-weight: bold;
-    padding: 10px 10px;
-    margin: 20px 20px;
-    width: 100%;
-  }
+.wrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.Sections {
+  margin-bottom: 20px;
+}
+
+.myButton {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.questions {
+  font-size: 18px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.answers button {
+  display: block;
+  margin-bottom: 10px;
+  padding: 10px 20px;
+  background-color: lightsalmon;
+  color: #333;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.checkAnswers {
+  margin-top: 20px;
+}
+
+.result {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#show-incorrect {
+  display: none;
+}
