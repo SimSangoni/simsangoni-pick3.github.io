@@ -863,6 +863,11 @@ function loadQuestion() {
   questionsElement.innerHTML = "";
   answersElement.innerHTML = "";
 
+  // Add question heading with numbering
+  const questionHeading = document.createElement("h2");
+  questionHeading.textContent = `Question ${currentQuestion + 1}/${quizData[currentSection].length}`;
+  questionsElement.appendChild(questionHeading);
+
   // Check if the question has an image
   if (currentQuizData.image) {
     const image = document.createElement("img");
