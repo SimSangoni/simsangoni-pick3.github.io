@@ -677,6 +677,150 @@ const quizData = {
       options: ['复兴号', '和谐号', '东方红号', '神州号'],
       correctAnswer: 0
       }
+  ],
+  填空题: [
+    {
+      question: "1. 中国的陆地面积约 ________ 平方公里。",
+      answer: ["960 万"]
+    },
+    {
+      question: "2. 中国首都北京所在时区（东 8 时区）的标准时为全中国统一时间，称为 ________。",
+      answer: ["北京时间"]
+    },
+    {
+      question: "3. 《 ________ 》是中国第一本按汉语拼音音序排列的小型字典，是迄今最有影响、最权威的一部小型汉语字典。",
+      answer: ["新华字典"]
+    },
+    {
+      question: "4. “世界杂交水稻之父” 院士利用中国野生稻资源培育出了世界闻名的杂交水稻。",
+      answer: ["袁隆平"]
+    },
+    {
+      question: "5. “一带一路”是“丝绸之路经济带”和“21 世纪 ________ ”的简称。",
+      answer: ["海上丝绸之路"]
+    },
+    {
+      question: "6. 中国现任国家主席是 ________。",
+      answer: ["习近平"]
+    },
+    {
+      question: "7. 是世界上最珍贵的动物之一，数量十分稀少，属于国家一级保护动物，体色为黑白相间，被誉为 “中国国宝”。",
+      answer: ["熊猫"]
+    },
+    {
+      question: "8. 中国气候的地域特点是南 ________ ，属于大陆性季风气候。",
+      answer: ["暖、寒"]
+    },
+    {
+      question: "9. 在中国 ________ 和 ________ 各有一个迪士尼乐园。",
+      answer: ["香港", "上海"]
+    },
+    {
+      question: "11. 中国有 34 个省级行政区，包括 23 个省、 _______ 个自治区、 _______ 个直辖市、 _______ 个特别行政区。",
+      answer: ["5", "4", "2"]
+    },
+    {
+      question: "12. 北京获 2022 年第二十四届奥林匹克冬季奥运会举办权，北京成为首个既举办过夏季奥运会，又举办冬季奥运会的城市。共同举办本届冬季奥运会的城市是 _______。",
+      answer: ["张家口"]
+    },
+    {
+      question: "13. 2018 年 3 月 23 日，中国科学院古脊椎动物与古人类研究所教授、中国科学院院士张弥曼在巴黎获颁“世界杰出女科学家”奖，她是第 _______ 位获此殊荣的中国女科学家。",
+      answer: ["五"]
+    },
+    {
+      question: "14. 目前世界排名前十的港口中，有 7 个位于中国。2017 年 12 月 _______ Yangshan Deepwater Port Phase IV 自动化码头建成，这是全球最大的智能集装箱码头，自动化码头所有操控系统均出自中国企业。",
+      answer: ["上海"]
+    },
+    {
+      question: "15. 中华人民共和国国旗是 _______，旗面为红色，旗面左上方缀有五颗黄色五角星。",
+      answer: ["五星红旗"]
+    },
+    {
+      question: "16. 按照中国婚姻法的规定，中国男性公民的结婚不早于 _______ 周岁，女性公民的结婚不早于 _______ 周岁。",
+      answer: ["22", "20"]
+    },
+    {
+      question: "17. ______ 是连接香港、珠海和澳门的超大型跨海通道。大桥总长 55 公里，是世界最长的跨海大桥。2018 年元旦，大桥主体全线亮灯，以在 2018 年 7 月通车。",
+      answer: ["港珠澳大桥"]
+    },
+    {
+      question: "18. 连接肯尼亚首都内罗毕和东非第一大港蒙巴萨，是一条采用中国标准、中国技术、中国装备建造的现代化铁路。该铁路是肯尼亚半个世纪以来最大的基建工程，已于 2017年 6 月开始试运营。\n________Connects Nairobi, the capital of Kenya, and Mombasa, the largest port in East Africa, is a modern railway built with Chinese standards, Chinese technology and Chinese equipment. The railway, Kenya's largest infrastructure project in half a century, began trial operation in June 2017.",
+      answer: ["蒙内铁路"]
+    },
+    {
+      question: "19. “久、修、秋”这一组字的读音韵母相同，都是“____”。 The part of pronunciation of the group of characters \"久、修、秋\" is the same, and the same part are all \"____\".",
+      answer: ["iou/iu"]
+    },
+    {
+      question: "20. “您、诺、能”这一组字的读音声母相同，都是“____”。 The part of pronunciation of the group of characters \"Nin, Nuo, Neng\" is the same, and the same part are all \"____\".",
+      answer: ["n"]
+    },
+    {
+      question: "21. “选、点、整”这一组字的读音声调相同，都是“____”。 The tone of the group of words \"selection, point, whole\" are the same, and they are all \"____\".",
+      answer: ["第三声（上声）"]
+    },
+    {
+      question: "22. “ü”在“_____、_____、_____” 三个声母后，书写时应该去掉“ü”上的两点。 \"ü\" is after the three initials of \"_____, _____, _____\", and the two dots on \"ü\" should be removed when writing.",
+      answer: ["j、q、x"]
+    },
+    {
+      question: "23. “长”在汉语中是个多音字，在“头发越长越长了”中分别读作_____和_____。 \"长\" is a polyphonic word in Chinese, and it is pronounced as _____ and _____ respectively in \"hair grows longer and longer\".",
+      answer: ["zhǎng、cháng"]
+    },
+    {
+      question: "24. 在“一心一意”中，第一个“一”念第____声，第二个“一”念第____声。 In \"one heart and one mind\", for the first \"one\", its tone is ____. And for the second \"one\", its tone is____.",
+      answer: ["四、二"]
+    },
+    {
+      question: "25. “不”在“不破不立”中念第____声，在“不清不楚”中念第____声。 The tone of \"不\" in \"不破不立\" is _____, and the tone in \"不清不楚\" is ____.",
+      answer: ["二、四"]
+    },
+    {
+      question: "26. “短斤少两”中的“斤”是中国老百姓日常生活中经常使用的重量计量单位。一斤相当于_______克。 The \"斤\" in \"短斤少两\" is a unit of weight often used by Chinese people in their daily lives. One 斤 is equivalent to _______ grams.",
+      answer: ["500"]
+    },
+    {
+      question: "27. “口”和“木”，可以根据上下结构组成两个不同的汉字，它们是“——”和“——”。 \"口\" and \"木\" can form two different Chinese characters according to the upper and lower structures, which are \"——\" and \"——\".",
+      answer: ["呆、杏"]
+    },
+    {
+      question: "28. 汉语口语中说一个人“有一肚子的墨水”，意思是这个人“很有 ————”。 In spoken Chinese, it is said that a person \"has a belly full of ink\", which means that this person \"has______\".",
+      answer: ["学问（知识）"]
+    },
+    {
+      question: "29. 汉语中有这样的句子：“听说你湖南菜做得很不错，给咱们露两手吧！” 这里“露两手”的意思是_____。 There is such a sentence in Chinese: \"I heard that you cook Hunan cuisine very well, show us your hands!\" Here \"show your hands\" means _____.",
+      answer: ["展示在某些方面的技术或才能"]
+    },
+    {
+      question: "30. 孔夫子搬家，_____________。 Confucius moved, ____________.",
+      answer: ["尽是输（书）"]
+    },
+    {
+      question: "31. 竹篮打水，____________。 Fetching water from a bamboo basket, ____________.",
+      answer: ["一场空"]
+    },
+    {
+      question: "32. 猪鼻子里插葱,__________。 A pig with green onions stuck in its nose, __________.",
+      answer: ["装象"]
+    },
+    {
+      question: "33. 唱、念、做___是中国戏曲表演的四种艺术手段，也是戏曲表演的四项基本功。 Singing, reciting, doing, and ______ are the four artistic methods of Chinese opera performance, as well as the four basic skills of opera performance.",
+      answer: ["打"]
+    },
+    {
+      question: "34. 从创作题材来看，中国画主要有花鸟画、人物画和___画。 In terms of creative themes, Chinese paintings mainly include flower and bird paintings, figure paintings and___paintings.",
+      answer: ["山水"]
+    },
+    {
+      question: "35. 重视教育，尊敬师长，在中国有悠久的传统。人们称老师为“恩师”“先生”。现在，中国把 9 月 10 日定为“_______”，以表达对教师的尊重。 Emphasizing education and respecting teachers has a long tradition in China. People call teachers \"loved teacher\" and \"sir\". Now, China has designated September 10th as \"_______\" to show respect for teachers.",
+      answer: ["教师节"]
+    },
+    {
+      question: "36. 中国古代著名的兵书_________已被译为英、法、日、德、俄等多种文字。 The famous ancient Chinese military book _________ has been translated into English, French, Japanese, German, Russian and other languages.",
+      answer: ["《孙子兵法》"]
+    },
+
+
   ]
 };
 
